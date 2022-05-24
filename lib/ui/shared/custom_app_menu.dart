@@ -1,3 +1,4 @@
+import 'package:curso_flutter_web_frontend_dashboard/locator.dart';
 import 'package:curso_flutter_web_frontend_dashboard/services/navigator_services.dart';
 import 'package:curso_flutter_web_frontend_dashboard/ui/shared/custom_flat_button.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,8 @@ class CustomAppMenu extends StatelessWidget {
             // onPressed: () {
             //   Navigator.pushNamed(context, '/stateful');
             // },
-            onPressed: () => navigationService.navigateTo('/stateful'),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/stateful'),
           ),
           const SizedBox(width: 10),
           CustomFlatButton(
@@ -27,7 +29,8 @@ class CustomAppMenu extends StatelessWidget {
             // onPressed: () {
             //   Navigator.pushNamed(context, '/provider');
             // },
-            onPressed: () => navigationService.navigateTo('/provider'),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/provider'),
           ),
           const SizedBox(width: 10),
           CustomFlatButton(
@@ -36,7 +39,7 @@ class CustomAppMenu extends StatelessWidget {
             // onPressed: () {
             //   Navigator.pushNamed(context, '/abc123');
             // },
-            onPressed: () => navigationService.navigateTo('/abc123'),
+            onPressed: () => locator<NavigationService>().navigateTo('/abc123'),
           ),
         ],
       ),

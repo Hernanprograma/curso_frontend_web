@@ -1,9 +1,11 @@
+import 'package:curso_flutter_web_frontend_dashboard/locator.dart';
 import 'package:curso_flutter_web_frontend_dashboard/router/router_generator.dart';
 import 'package:curso_flutter_web_frontend_dashboard/services/navigator_services.dart';
 import 'package:curso_flutter_web_frontend_dashboard/ui/layout/main_layout_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: RouteGenerator.generateRoute,
-      navigatorKey: navigationService.navigatorKey,
+      navigatorKey: locator<NavigationService>().navigatorKey,
       builder: (_, child) {
         return MainLayoutPage(
           child: child ?? Container(),
