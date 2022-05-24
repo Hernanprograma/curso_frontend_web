@@ -24,15 +24,20 @@ class _CounterPageState extends State<CounterPage> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 'Contador  $counter',
-                style: const TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
               ),
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomFlatButton(text: 'Incrementar', onPressed: () => setState(() => counter++)),
-              CustomFlatButton(text: 'Decrementar', onPressed: () => setState(() => counter--)),
+              CustomFlatButton(
+                  text: 'Incrementar',
+                  onPressed: () => setState(() => counter++)),
+              CustomFlatButton(
+                  text: 'Decrementar',
+                  onPressed: () => setState(() => counter--)),
             ],
           ),
           Spacer()
