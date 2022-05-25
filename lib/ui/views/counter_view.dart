@@ -1,14 +1,28 @@
-import 'package:curso_flutter_web_frontend_dashboard/ui/shared/custom_app_menu.dart';
 import 'package:curso_flutter_web_frontend_dashboard/ui/shared/custom_flat_button.dart';
 import 'package:flutter/material.dart';
 
 class CounterView extends StatefulWidget {
+  final String base;
+
+  const CounterView({
+    super.key,
+    required this.base,
+  });
   @override
   State<CounterView> createState() => _CounterViewState();
 }
 
 class _CounterViewState extends State<CounterView> {
-  int counter = 0;
+  int counter = 10;
+
+  @override
+  void initState() {
+    super.initState();
+    if (int.tryParse(widget.base) != null) {
+      counter = int.parse(widget.base);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(

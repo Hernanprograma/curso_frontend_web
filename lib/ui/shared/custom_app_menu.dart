@@ -29,9 +29,6 @@ class _TableDesktopMenu extends StatelessWidget {
           CustomFlatButton(
             text: 'Contador Stateful',
             color: Colors.black,
-            // onPressed: () {
-            //   Navigator.pushNamed(context, '/stateful');
-            // },
             onPressed: () =>
                 locator<NavigationService>().navigateTo('/stateful'),
           ),
@@ -39,9 +36,6 @@ class _TableDesktopMenu extends StatelessWidget {
           CustomFlatButton(
             text: 'Contador con Provider',
             color: Colors.black,
-            // onPressed: () {
-            //   Navigator.pushNamed(context, '/provider');
-            // },
             onPressed: () =>
                 locator<NavigationService>().navigateTo('/provider'),
           ),
@@ -49,10 +43,21 @@ class _TableDesktopMenu extends StatelessWidget {
           CustomFlatButton(
             text: 'Otra Página',
             color: Colors.black,
-            // onPressed: () {
-            //   Navigator.pushNamed(context, '/abc123');
-            // },
             onPressed: () => locator<NavigationService>().navigateTo('/abc123'),
+          ),
+          const SizedBox(width: 10),
+          CustomFlatButton(
+            text: 'Stateful 100',
+            color: Colors.black,
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/stateful/100'),
+          ),
+          const SizedBox(width: 10),
+          CustomFlatButton(
+            text: 'Provider 200',
+            color: Colors.black,
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/provider?q=200'),
           ),
         ],
       ),

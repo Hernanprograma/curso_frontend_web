@@ -6,25 +6,28 @@ class View404 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            '404',
-            style: TextStyle(fontSize: 70),
-          ),
-          const SizedBox(height: 20),
-          const Text(
-            'Pagina no encontrada',
-            style: TextStyle(fontSize: 40),
-          ),
-          const SizedBox(height: 20),
-          CustomFlatButton(
-            text: 'Regresar',
-            onPressed: () => Navigator.pushNamed(context, '/stateful'),
-          ),
-        ],
+    return Container(
+      color: Colors.white,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              '404',
+              style: TextStyle(fontSize: 70),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Pagina no encontrada',
+              style: TextStyle(fontSize: 40),
+            ),
+            const SizedBox(height: 20),
+            CustomFlatButton(
+              text: 'Regresar',
+              onPressed: () => Navigator.pushNamed(context, '/stateful'),
+            ),
+          ],
+        ),
       ),
     );
   }
